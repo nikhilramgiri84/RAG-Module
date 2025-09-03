@@ -1,0 +1,61 @@
+# Depth Regression Model for RGBd Image Dataset
+
+This project focuses on designing and evaluating a neural network for **monocular depth estimation**. The model predicts the distance of objects in an image from the camera using a single RGB image. Depth estimation is a vital task in computer vision, enabling machines to infer the 3D structure of a scene from 2D data.
+
+## Applications
+
+Depth estimation plays a crucial role in:
+
+- **Autonomous Driving**: For obstacle detection and path planning.
+- **Augmented Reality (AR)**: For spatial understanding and object placement.
+- **Robotics**: For navigation, object manipulation, and spatial awareness.
+
+## Objective
+
+The primary objective is to develop a model capable of accurately predicting depth maps from RGB images. The performance is evaluated across key metrics, including:
+
+- **Mean Squared Error (MSE)**
+- **Root Mean Squared Error (RMSE)**
+- **Mean Absolute Error (MAE)**
+
+## Model Overview
+
+The project is implemented as an **ensemble** model combining two networks:
+
+### GlobalDepthNetwork
+- Focuses on capturing **global depth information** from the entire image.
+- Extracts high-level contextual features to understand the overall scene structure.
+
+### LocalGradientNetwork
+- Focuses on capturing **local gradient and edge information**.
+- Enhances the model's ability to predict **fine-grained depth details** and spatial relationships.
+
+The ensemble approach ensures both global context and local details are effectively captured for robust depth prediction.
+
+## Dataset
+
+The dataset used in this project includes RGB and depth images, enabling supervised learning for depth regression tasks.  
+You can explore the dataset here: **[Dataset Link](#)** <!-- Replace # with the actual dataset URL -->
+
+## Project Features
+
+### Model Design
+- Implementation of an ensemble model combining **GlobalDepthNetwork** and **LocalGradientNetwork**.
+- Use of **convolutional layers** for feature extraction and depth prediction.
+
+### Evaluation Metrics
+- Performance is measured using standard regression metrics like **MSE**, **RMSE**, and **MAE**.
+
+### Visualization
+- Depth maps are visualized for qualitative analysis.
+
+### Code Structure
+- Well-documented code for easy reproduction and further experimentation.
+
+## Technologies Used
+
+- **Python**
+- **TensorFlow/Keras**: For building and training the neural networks.
+- **NumPy**: For numerical computations.
+- **Matplotlib**: For visualization of results.
+- **Jupyter Notebook**: For interactive development.
